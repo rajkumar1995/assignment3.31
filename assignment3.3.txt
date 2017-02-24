@@ -1,0 +1,25 @@
+List the components of hadoop2.X and explain each component in detail.
+  hadoop2.x is an updated version of hadoop1 where  drawbacks have been updated 
+It is only suitable for Batch Processing of Huge amount of Data, which is already in Hadoop System.
+It is not suitable for Real-time Data Processing.
+It is not suitable for Data Streaming.
+It supports upto 4000 Nodes per Cluster.
+It has a single component : JobTracker to perform many activities like Resource Management, Job Scheduling, Job Monitoring, Re-scheduling Jobs etc.
+JobTracker is the single point of failure.
+   we are now moving to hadoop 2.x the components are 
+                 1.yarn
+                 2.hdfs
+                 3.mapreduce
+1.yarn
+      YARN involves setting up both global and application-specific resource management components. This helps to allocate resources to particular applications and manage other kinds of resource monitoring tasks. In YARN, an application submission client submits an application to the YARN resource manager. YARN 'schedules’ applications in order to prioritize tasks and maintain big data analytics systems. This is just one part of a greater architecture for aggregating and sorting data, conducting specific queries to retrieve data, and otherwise using Hadoop and related tools to manipulate big data for business intelligence and much more. Businesses use these kinds of platforms to look at supply chains, document product and service operations, keep track of customer information, and for many other kinds of powerful data-driven and automated business processes.
+
+2.hdfs
+      Hadoop File System was developed using distributed file system design. It is run on commodity hardware. Unlike other distributed systems, HDFS is highly faulttolerant and designed using low-cost hardware.
+
+HDFS holds very large amount of data and provides easier access. To store such huge data, the files are stored across multiple machines. These files are stored in redundant fashion to rescue the system from possible data losses in case of failure. HDFS also makes applications available to parallel processing
+
+
+3.mapreduce
+           MapReduce is a framework using which we can write applications to process huge amounts of data, in parallel, on large clusters of commodity hardware in a reliable manner.
+MapReduce is a processing technique and a program model for distributed computing based on java. The MapReduce algorithm contains two important tasks, namely Map and Reduce. Map takes a set of data and converts it into another set of data, where individual elements are broken down into tuples (key/value pairs). Secondly, reduce task, which takes the output from a map as an input and combines those data tuples into a smaller set of tuples. As the sequence of the name MapReduce implies, the reduce task is always performed after the map job.
+The major advantage of MapReduce is that it is easy to scale data processing over multiple computing nodes. Under the MapReduce model, the data processing primitives are called mappers and reducers.
